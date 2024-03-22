@@ -1,0 +1,14 @@
+
+@use "./sass/variables.scss";
+@use "./sass/app";
+@use "./sass/header";
+@use "./sass/home";
+@use "./sass/thumb";
+
+@use "./sass/logement.scss";
+
+
+body {
+    font-family: "Roboto", sans-serif;
+    color: #ff6060;
+}

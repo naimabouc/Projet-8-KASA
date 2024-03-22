@@ -1,0 +1,39 @@
+.apartmentDescriptionArea {
+    
+    display: flex;
+    justify-content: space-between;
+}
+.Description {
+    
+    padding-right: 40px;
+}
+.equipments {
+    width: 50%;
+}
+
+.descriptionTitle {
+    background-color:#ff6060;
+    color: #E3E3E3;
+    border-radius: 0.7rem;
+    display: flex;
+    width: 100%;
+    padding:0.7em;
+    justify-content: space-between;
+    margin-bottom: 0;
+
+}
+.fa-chevron-up {
+    background-color: #FF6060;
+    color: #E3E3E3;
+    font-size: 20px;
+    cursor: pointer;
+}
+.descriptionContent {
+    background-color: #E3E3E3;
+    color: #FF6060;
+    padding: 1rem;
+    border-radius: 0 0 1rem 1rem;
+    margin-block: 0;
+    font-size: 20px;
+    
+}

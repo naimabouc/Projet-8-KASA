@@ -1,0 +1,28 @@
+* {
+    
+    box-sizing: border-box;
+    
+    font-style: normal;
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 0 100px;
+    
+    .gallery {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        flex-flow: wrap;
+        background-color: #F6F6F6;
+        border-radius: 25px;
+        margin-top: 3%;
+        padding: 5%;
+    }
+    
+
+}
+
