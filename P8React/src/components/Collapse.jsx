@@ -1,17 +1,17 @@
 import { useState } from "react"
-import "../sass/descriptionequipement.scss"
+import "../sass/collapse.scss"
 
-export function DescriptionEquipment (props) {
+function Collapse (props) {
     const [isContentVisible, setIsContentVisible]= useState(false)
 
-    const collapse = () => {
+    const collapsis = () => {
         setIsContentVisible(!isContentVisible);
     }
     return (
         <div className="Description">
             <p className="descriptionTitle">
                 <span>{props.title}</span>
-                <i className="fa-solid fa-chevron-up" onClick={collapse}></i>
+                <i className="fa-solid fa-chevron-up" onClick={collapsis}></i>
             </p>
         
             {isContentVisible && <p className="descriptionContent">{props.content}</p>}
@@ -20,3 +20,4 @@ export function DescriptionEquipment (props) {
     )
 }
     
+export default Collapse;

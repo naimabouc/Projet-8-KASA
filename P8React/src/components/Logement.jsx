@@ -1,60 +1,34 @@
-import {useParams } from "react-router-dom";
+import { useEffect } from "react";
+import {useNavigate, useParams } from "react-router-dom";
 import logements from "../data/logements.json";
-import { DescriptionEquipment } from "./DescriptionEquipment";
+import Caroussel from "./Caroussel";
+import { useState } from "react";
+import ApartmentHeader from "./ApartmentHeader";
+import  Collapse  from "./Collapse";
+import "../sass/logement.scss";
 
 
 function findLogementID (id) {
     return logements.find((logement) =>logement.id === id)
 }
-function Logement (props) {
+function Logement () {
     const{id} = useParams();
     const logement = findLogementID(id);
-    const pictures = logement.pictures;
-    
     return (
-        <div className="logement">
-            <div className="pictures">
-                {pictures.map((picture, index) => {
-                   return (
-                      <img src={picture} alt={picture.title} key={(picture, index)}/>
-                    );
-                  })}
-            </div>
-           <div className="appartmentHeader">
-                <div className="title">
-                    <h1>{logement.title}</h1>
-                    <h2>{logement.location}</h2>
-                </div>  
-                
-                <div className="hostandrating">
-                    <div className="host">
-                        <h2 className="hostName">{logement.host.name}</h2>
-                        <img className="hostImg" src ={logement.host.picture} alt="" />
-                    </div>
-                    <div className="rating">
-                        {[1, 2, 3, 4, 5].map((num)=> <span key={num} className={logement.rating > num ? "on" : ""}>★</span>)}
-                    </div>
-                </div>
-            </div>
-            <div className="tags">
-                <span className="containertags">
-                        {logement.tags.map((tag, id) => (
-                        <span className="tag" key={`${tag}-${id}`}>{ tag}</span>
-                     ) )}
-                </span>
-            </div>
-
+        <div>
+            <Caroussel images={logement.pictures} />
+            <ApartmentHeader logement={logement}/>
             <div className="apartmentDescriptionArea">
-                <DescriptionEquipment title="Description" content={logement.description} />
-                <DescriptionEquipment title="Equipements" content={logement.equipments.map((equipments) => (
+                <Collapse title="Description" content={logement.description} />
+                <Collapse title="Equipements" content={logement.equipments.map((equipments) => (
                 <li className="equipmentslist" key={`${equipments}`}>{ equipments}</li>
             ) )} />
             </div>
-            
+        </div>
+    
+        )
+    
+        }
+ 
 
-           
-     </div>  
-    )
-}
 export default Logement;
-

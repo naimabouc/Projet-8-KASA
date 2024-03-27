@@ -5,11 +5,22 @@
 }
 
 .pictures {
+    position: relative;
+    height: 20rem;
+    width: 100%;
+    margin-bottom: 2rem;
     img {
-        width: 200px;
-        height: 200px;
+        width: 100%;
+        height: 100%;
         object-fit: cover;
-        border-radius: 25px;
+        border-radius: 1rem;
+        position: absolute;
+        opacity: 0;
+        &.show {
+        opacity: 1;
+       }
+       
+        
     }
 }
 h1 {
@@ -41,19 +52,25 @@ h2 {
     font-size: 14px;
     margin-top: -3%;
     margin-bottom: 3%;
-    
 }
+.Apartment {
+    margin: 0 5%;
+}    
+
 .appartmentHeader {
     display: flex;
     justify-content: space-between;
+    
 }
 .hostandrating {
-    display: block;
+    display: flex;
+    flex-direction: column;
 }
 .host {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: end;
 }
 .hostImg {
     width: 64px;
@@ -64,8 +81,28 @@ h2 {
 .rating {
     color: #E3E3E3;
     font-size: 36px;
+    display: flex;
+    justify-content: end;
 }
 .on {
     color: #FF6060;
    
+}
+.fleches {
+    display: flex;
+}
+.Right {
+    position: absolute;
+    font-size: 70px;
+    top: 31%;
+    left: 90%;
+    color: white;
+}
+
+.Left {
+    position: absolute;
+    font-size: 70px;
+    top: 31%;
+    color: white;
+    margin-left: 1%;
 }
