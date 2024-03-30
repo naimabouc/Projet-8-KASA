@@ -1,6 +1,6 @@
 import logoKasa from "../assets/images/logo.png";
 import Navigation from "./Navigation";
-
+import "../sass/header.scss";
 
 
 function Header (props) {
@@ -13,4 +13,4 @@ function Header (props) {
     );
   };
   
-  export default Header
+  export default Header;

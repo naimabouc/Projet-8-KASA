@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-
+import "../sass/error.scss";
 
 function Error404  ()  {
   return (

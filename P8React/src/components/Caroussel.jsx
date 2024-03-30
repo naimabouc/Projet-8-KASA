@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "../sass/logement.scss";
+
 
 
 const Caroussel = ({images}) => {
@@ -16,12 +16,13 @@ const Next = () => {
 const Prev =() => {
   const newCurrentPicture = currentPicture - 1;
     if(newCurrentPicture < 0) {
-        setCurrentPicture(slides.length - 1)
+        setCurrentPicture(images.length - 1)
         return;
     }
     setCurrentPicture((currentPicture - 1 % images.length))
-   };
    
+   };
+  
  return (
      <div className="logement">
          <div className="pictures">
@@ -31,13 +32,32 @@ const Prev =() => {
                    <img src={picture} alt="" key={(picture, index)} className={getClassName(index)}/>
                  );
                })}
+                
          </div>
+         
          <span className="fleches">
-              <i onClick={Next} className="fa-solid fa-chevron-right Right"></i>
+               <span>
+                {images.length > 1 &&  (
+                  <i onClick={Next} className="fa-solid fa-chevron-right Right"></i>
+                  )}
+               </span>
+               
+              <span>
+                {images.length > 1 && (
               <i onClick={Prev} className="fa-solid fa-chevron-left Left"></i> 
-         </span>
+                )}
+              </span>
+        </span>
+              {images.length > 1 && (
+              <span className="counter">{currentPicture + 1} / {images.length}</span>
+              )}
+         
          </div>
                   )
+      
+        
+
+        
               
               }          
                

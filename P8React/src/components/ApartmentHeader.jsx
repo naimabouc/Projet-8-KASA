@@ -1,5 +1,4 @@
 import React from "react";
-import "../sass/logement.scss";
 
 
 function ApartmentHeader (props) {

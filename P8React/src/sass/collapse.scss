@@ -15,7 +15,7 @@
     color: white;
     border-radius: 0.7rem;
     display: flex;
-    
+    font-size: 24px;
     padding:0.7em;
     justify-content: space-between;
     margin-bottom: 0;
@@ -24,19 +24,34 @@
 .fa-chevron-up {
     background-color: #FF6060;
     color: white;
-    font-size: 20px;
+    
     cursor: pointer;
-   
+    
+    height: 24px;
+    width: 24px;
+    
+}   
+
+.rotate {
+    transform: rotate(180deg);
 }
+
 .descriptionContent {
-    background-color: #E3E3E3;
+    background-color: #f6f6f6;
     color: #FF6060;
     padding: 1rem;
     border-radius: 0 0 1rem 1rem;
     margin-block: 0;
     font-size: 20px;
     z-index: -1;
-
-    
+}
+li {
+    list-style: none;
 }
 
+    
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}

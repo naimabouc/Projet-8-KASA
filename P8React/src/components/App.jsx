@@ -2,10 +2,8 @@ import Header from "./Header";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Logement from "./Logement";
-import Error from "./pages/Error"
-
-
+import Logement from "./pages/Logement";
+import Error404 from "./pages/Error";
 
 function App (props) {
   return (
@@ -15,7 +13,7 @@ function App (props) {
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="logement/:id" element={<Logement/>} />
-      <Route path="*" element={<Error />} />
+      <Route path="*" element={<Error404 />} />
     </Routes>
       </BrowserRouter>
   );
