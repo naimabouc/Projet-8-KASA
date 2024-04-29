@@ -6,7 +6,7 @@ import Footer from "../Footer";
 function About () {
     return (
       <div>
-        <div className="bannerAbout">
+        <div className="banner">
         <BannerAbout />
         </div>
           <div className="about">

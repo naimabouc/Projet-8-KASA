@@ -4,7 +4,14 @@
     gap: 5rem;
     justify-content: center;
     margin: 0 5%;
-}
+    @media screen and (max-width:768px) {
+        flex-direction: column ;
+        width: 100%;
+        gap: 0;
+        }
+    }  
+
+
 
 .equipments {
     width: 50%;
@@ -19,8 +26,12 @@
     padding:0.7em;
     justify-content: space-between;
     margin-bottom: 0;
+    @media screen and (max-width:768px) {
+        font-size: 18px;
+        }
+    }  
 
-}
+
 .fa-chevron-up {
     background-color: #FF6060;
     color: white;
@@ -44,14 +55,13 @@
     margin-block: 0;
     font-size: 20px;
     z-index: -1;
-}
+    @media screen and (max-width:768px) {
+        font-size: 18px;
+        }
+    }  
+
 li {
     list-style: none;
 }
 
     
-@keyframes spin {
-    to {
-        transform: rotate(360deg);
-    }
-}

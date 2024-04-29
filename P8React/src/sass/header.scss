@@ -1,23 +1,52 @@
 .header {
     display: flex;
     margin: 40px 100px 49px;
+    max-width: 1340px;
+    width: 95%;
     justify-content: space-between;
+    @media screen and (max-width: 1024px) {
+        
+        margin: 0;
+      }
+
+    @media screen and (max-width: 768px) {
+        
+        margin: 0;
+      }
+    img {
+       width: 120px;
+       height: 40px;
+        @media screen and (max-width: 768px) {
+            width: 120px;
+            height: 40px;
+            margin-left: 2%;
+          } 
+    }
     nav {
         ul{
             display: flex;
             font-size: 22px;
+            @media screen and (max-width: 1024px) {
+                justify-content: space-around;
+              }
             a{
                 text-decoration: none;
                 color: #ff6060;
                 &.underline{
                     text-decoration: underline;
                 }
-            }
+                @media screen and (max-width: 768px) {
+                    font-size: 0.8rem;
+                    text-transform: uppercase;
+                    
+                    }
+                }
+            
             li{
-                margin: 0 10px;
+                margin: 0 20px;
                 list-style: none;
                 
             }
         }
     }
-}
+    }
