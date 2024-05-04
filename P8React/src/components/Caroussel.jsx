@@ -36,17 +36,18 @@ const Prev =() => {
          </div>
          
          <span className="fleches">
+         <span>
+                {images.length > 1 && (
+              <i onClick={Prev} className="fa-solid fa-chevron-left Left"></i> 
+                )}
+              </span>
                <span>
                 {images.length > 1 &&  (
                   <i onClick={Next} className="fa-solid fa-chevron-right Right"></i>
                   )}
                </span>
                
-              <span>
-                {images.length > 1 && (
-              <i onClick={Prev} className="fa-solid fa-chevron-left Left"></i> 
-                )}
-              </span>
+              
         </span>
               {images.length > 1 && (
               <span className="counter">{currentPicture + 1} / {images.length}</span>

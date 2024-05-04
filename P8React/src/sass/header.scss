@@ -1,12 +1,16 @@
 .header {
     display: flex;
-    margin: 40px 100px 49px;
-    max-width: 1340px;
-    width: 95%;
-    justify-content: space-between;
+  margin:0 auto;
+  max-width: 1240px;
+  flex-direction: row;
+  width: 95%;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-top: 15px;
+  padding-bottom: 20px;
     @media screen and (max-width: 1024px) {
         
-        margin: 0;
+       
       }
 
     @media screen and (max-width: 768px) {
@@ -16,19 +20,19 @@
     img {
        width: 120px;
        height: 40px;
+      
         @media screen and (max-width: 768px) {
             width: 120px;
             height: 40px;
-            margin-left: 2%;
+            margin: 4%;
           } 
     }
     nav {
         ul{
             display: flex;
+            gap: 33px;
             font-size: 22px;
-            @media screen and (max-width: 1024px) {
-                justify-content: space-around;
-              }
+            
             a{
                 text-decoration: none;
                 color: #ff6060;
@@ -43,9 +47,11 @@
                 }
             
             li{
-                margin: 0 20px;
+                margin-right: 0px;
                 list-style: none;
-                
+                @media screen and (max-width: 768px) {
+                    margin-right: -0.3rem;
+                }
             }
         }
     }

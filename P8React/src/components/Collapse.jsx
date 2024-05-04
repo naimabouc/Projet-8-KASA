@@ -11,10 +11,10 @@ function Collapse (props) {
    
     return (
         <div className="Description">
-            <p className="descriptionTitle">
+            <ul className="descriptionTitle">
                 <span>{props.title}</span>
                 <i className={isContentVisible ? "fa-solid fa-chevron-up rotate": "fa-solid fa-chevron-up" }   onClick={collapsis}></i>
-            </p>
+            </ul>
         
             {isContentVisible && <p className="descriptionContent">{props.content}</p>}
 
